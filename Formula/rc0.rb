@@ -8,24 +8,24 @@
 class Rc0 < Formula
   desc "Command line for RcodeZero DNS"
   homepage "https://github.com/zoltanf/rc0-cli"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/zoltanf/rc0-cli/releases/download/v#{version}/rc0-#{version}-macos-arm64.tar.gz"
-      sha256 "47c3fd58af7db27ab2fd8480c4db1956a815c2f894fabfddcffbaf463e1bad53"
+      sha256 "71e6b5a35a51030f178dd1476a5e473e43a4a5b8621200a8cb7bf7be01d784d4"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/zoltanf/rc0-cli/releases/download/v#{version}/rc0-#{version}-linux-arm64.tar.gz"
-      sha256 "d8b94d51d373e3b6a8c612262429ef673c54b0f209178c475d957a1228e96651"
+      sha256 "978011caec8d5733d34fdb22da04d90401452c66608e0e2324b34779ecaef819"
     end
     on_intel do
       url "https://github.com/zoltanf/rc0-cli/releases/download/v#{version}/rc0-#{version}-linux-x86_64.tar.gz"
-      sha256 "7b1a7ca2b3102900d7cb4b9bdf2baa52bc1a26c4b391d1ca73a2250305814df7"
+      sha256 "2e5cc9f8c3b21badb8345449d802ac361db2d92a0fbb29666412c64a00e66196"
     end
   end
 
