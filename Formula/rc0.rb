@@ -31,8 +31,6 @@ class Rc0 < Formula
 
   def install
     bin.install "rc0"
-    # PyInstaller binaries built with strip lose their macOS signature; re-sign ad-hoc.
-    system "codesign", "--force", "--deep", "--sign", "-", "#{bin}/rc0" if OS.mac?
   end
 
   test do
