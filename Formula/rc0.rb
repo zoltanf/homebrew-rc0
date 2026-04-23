@@ -13,26 +13,24 @@ class Rc0 < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/zoltanf/rc0-cli/releases/download/v#{version}/rc0-#{version}-macos-arm64"
-      sha256 "7bb057c3eabe6e54f1d42c4e8816dbb70796fda25e43476df13d41f03097a075"
+      url "https://github.com/zoltanf/rc0-cli/releases/download/v#{version}/rc0-#{version}-macos-arm64.tar.gz"
+      sha256 "f7967a87bccc474cb3f14597f72176ca09ed2106e7a9401da2012264a58cd1a1"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/zoltanf/rc0-cli/releases/download/v#{version}/rc0-#{version}-linux-arm64"
-      sha256 "6a3c93eeb986694eeba8d249c2e41f7772328f04ee12fa6855f7c2c931ddcba3"
+      url "https://github.com/zoltanf/rc0-cli/releases/download/v#{version}/rc0-#{version}-linux-arm64.tar.gz"
+      sha256 "6c538438732035a660911a0de21fcb4c4c222cd65538d933130b3f575d0dc73c"
     end
     on_intel do
-      url "https://github.com/zoltanf/rc0-cli/releases/download/v#{version}/rc0-#{version}-linux-x86_64"
-      sha256 "e32a834694ab57bc9860b4c32193e81588db81e93602ac92361fe261aa492a6d"
+      url "https://github.com/zoltanf/rc0-cli/releases/download/v#{version}/rc0-#{version}-linux-x86_64.tar.gz"
+      sha256 "bf4e588510e2322be82a214ec0ce1a64b46656a6e321775c563f62661b10bf42"
     end
   end
 
   def install
-    bin.install Dir["rc0-*"].first => "rc0"
-    # Remove macOS quarantine flag — binary is unsigned (PyInstaller).
-    system "xattr", "-d", "com.apple.quarantine", "#{bin}/rc0" if OS.mac?
+    bin.install "rc0"
   end
 
   test do
